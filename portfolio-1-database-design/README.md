@@ -9,3 +9,6 @@ Case Study: TimaPay
 
 ## How to Run
 Open pgAdmin or psql and run:
+
+## fk-constraint-error.png` — Demonstrates foreign key constraint enforcement 
+  (Transaction rejected when Account does not exist)
