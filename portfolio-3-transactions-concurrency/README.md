@@ -1,0 +1,11 @@
+# Portfolio 3 — Transactions and Concurrency
+
+Case Study:TimaPay
+
+## Contents
+- `transfer.sql` — Full atomic fund transfer script
+- `rollback-demo.sql` — Rollback demonstration
+- `isolation-levels.sql` — Isolation level test scripts
+- `locking-demo.sql` — SELECT FOR UPDATE pessimistic locking demo
+- `reversal.sql` — Transaction reversal script
+- Screenshots showing commit, rollback, phantom read, and lock behaviour
