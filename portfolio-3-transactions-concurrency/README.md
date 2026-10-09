@@ -9,3 +9,5 @@ Case Study:TimaPay
 - `locking-demo.sql` — SELECT FOR UPDATE pessimistic locking demo
 - `reversal.sql` — Transaction reversal script
 - Screenshots showing commit, rollback, phantom read, and lock behaviour
+
+READ COMMITTED and SERIALIZABLE isolation levels were configured using SET SESSION CHARACTERISTICS. Both returned the same results in a single-session test. Under concurrent access, READ COMMITTED would permit phantom reads while SERIALIZABLE would prevent them.
