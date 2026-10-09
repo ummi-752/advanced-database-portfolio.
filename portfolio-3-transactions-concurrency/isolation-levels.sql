@@ -1,13 +1,13 @@
-BEGIN;
+SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
-  UPDATE Account
-  SET Balance = Balance - 999999.00
-  WHERE Account_Number = 'ACC001'
-    AND account_type = 'savings';
+SELECT Transaction_ID, transaction_type, amount, transaction_ts
+FROM Transaction
+WHERE Account_Number = 'ACC001'
+ORDER BY transaction_ts ASC;
 
-  -- This will violate the savings_no_overdraft check constraint
-  -- The constraint will fire and reject this
+SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
-ROLLBACK;
-
-SELECT Account_Number, Balance FROM Account WHERE Account_Number = 'ACC001';
+SELECT Transaction_ID, transaction_type, amount, transaction_ts
+FROM Transaction
+WHERE Account_Number = 'ACC001'
+ORDER BY transaction_ts ASC;
