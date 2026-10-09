@@ -75,3 +75,4 @@ CREATE TABLE Audit_Log (
     New_Value       JSONB,
     Event_Timestamp TIMESTAMPTZ     NOT NULL DEFAULT NOW()
 );
+
